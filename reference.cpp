@@ -1,35 +1,72 @@
 #include <iostream>
 
-#define LOG(x) std::cout << x << std::endl
+int main(){
+    // int int_val {45};
+    // double double_val {33.65};
 
-void Increment(int* value)
-{
-    (*value)++;
-}
+    // int& ref_int_val1 {int_val}; // assign through initialization
+    // int& ref_int_val2 = int_val; // assign through assignment 
+    // double& reference_double_val {double_val};
 
-void Inc(int& value)
-{
-    value++;
-}
+    // you have to declare and initialize in one statement
+    // int& some_ref; // this is an error
 
-int main()
-{
-    int a = 5;
+    int i_data{100};
+    double d_data{11.1};
 
-    // int* b = &a;
+    //references
+    int& ref_i_data {i_data};
+    double& ref_d_data {d_data};
 
-    Increment(&a);
+    // print
+    std::cout << "i_data : " << i_data << std::endl;
+    std::cout << "&i_data : " << &i_data << std::endl;
+    std::cout << "d_data : " << d_data << std::endl;
+    std::cout << "&d_data : " << &d_data << std::endl;
 
-    // here & is a part of type
-    // int& ref = a;
+    std::cout << "======================================" << std::endl;
 
-    // ref = 2;
+    std::cout << "ref_i_data : " << ref_i_data << std::endl;
+    std::cout << "&ref_i_data : " << &ref_i_data << std::endl;
+    std::cout << "ref_d_data : " << ref_d_data << std::endl;
+    std::cout << "&ref_d_data : " << &ref_d_data << std::endl;
 
-    LOG(a);
+    std::cout << std::endl;
+    std::cout << "***************************************" << std::endl << std::endl;
 
+    i_data = 200;
+    d_data = 22.2;
 
-    Inc(a);
-    LOG(a);
+    std::cout << "i_data : " << i_data << std::endl;
+    std::cout << "&i_data : " << &i_data << std::endl;
+    std::cout << "d_data : " << d_data << std::endl;
+    std::cout << "&d_data : " << &d_data << std::endl;
+
+    std::cout << "======================================" << std::endl;
+
+    std::cout << "ref_i_data : " << ref_i_data << std::endl;
+    std::cout << "&ref_i_data : " << &ref_i_data << std::endl;
+    std::cout << "ref_d_data : " << ref_d_data << std::endl;
+    std::cout << "&ref_d_data : " << &ref_d_data << std::endl;
+
+    // std::cout << std::endl;
+    ref_i_data = 300;
+    ref_d_data = 33.3;
+
+    std::cout << std::endl;
+    std::cout << "***************************************" << std::endl << std::endl;
+
+    std::cout << "i_data : " << i_data << std::endl;
+    std::cout << "&i_data : " << &i_data << std::endl;
+    std::cout << "d_data : " << d_data << std::endl;
+    std::cout << "&d_data : " << &d_data << std::endl;
+
+    std::cout << "======================================" << std::endl;
+
+    std::cout << "ref_i_data : " << ref_i_data << std::endl;
+    std::cout << "&ref_i_data : " << &ref_i_data << std::endl;
+    std::cout << "ref_d_data : " << ref_d_data << std::endl;
+    std::cout << "&ref_d_data : " << &ref_d_data << std::endl;
 
 
     return 0;
